@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMONA'S COCINA</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"/> 
+    <style>
+        img {
+            height: 500px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+                <!-- <i class="fa-solid fa-skull-cow"></i> -->
+            </label>
+            <ul class="header-list">
+                <li class="header-list__item"><a href="">Contact</a></li>
+                <li class="header-list__item"><a href="">blog</a></li>
+                <li class="header-list__item"><a href="">Sorces</a></li>
+                <li class="header-list__item"><a href="">About</a></li>
+                <li class="header-list__item"><a href="">Home</a></li>
+            </ul>
+        </nav>
+
+        <h1><b>RAMONA'S COCINA</b></h1>
+    </header>
+    <main>
+        <section>
+            <figure>
+                <img src="./raw/menu_ramonas.jpg" alt="Menu Ramonas">
+            </figure>
+        </section>
+        <section>
+            <h2>Haz tu pedido:</h2>
+            <form action="/procesar_pedido" method="post">
+                <label for="opcion_menu">Selecciona una opción de menú:</label><br>
+                <select id="opcion_menu" name="opcion_menu">
+                    <option value="1">Desayuno</option>
+                    <option value="2">Comida corrida</option>
+                    <option value="3">Menú a la carta</option>
+                </select><br><br>
+
+                <div id="desayuno" style="display:none;">
+                    <label for="opcion_elegida_entrada">Elige una opción del menú de desayuno:</label><br>
+                    <select id="opcion_elegida_entrada" name="opcion_elegida_entrada">
+                        <option value="1">Huevos al gusto</option>
+                        <option value="2">Omelettes</option>
+                        <option value="3">Chilaquiles</option>
+                        <option value="4">Molletes</option>
+                    </select><br><br>
+                </div>
+
+                <div id="comida_corrida" style="display:none;">
+                    <label for="opcion_elegida_entrada">Elige una opción de entrada:</label><br>
+                    <select id="opcion_elegida_entrada" name="opcion_elegida_entrada">
+                        <option value="a">Sopa de fideo</option>
+                        <option value="b">Sopa de verdura</option>
+                    </select><br><br>
+                    <label for="opcion_elegida_guisado">Elige una opción de guisado:</label><br>
+                    <select id="opcion_elegida_guisado" name="opcion_elegida_guisado">
+                        <option value="a">Bistec en salsa verde</option>
+                        <option value="b">Pollo a la jardinera</option>
+                    </select><br><br>
+                    <label for="opcion_elegida_guarnicion_1">Elige una primera opción de guarnición:</label><br>
+                    <select id="opcion_elegida_guarnicion_1" name="opcion_elegida_guarnicion_1">
+                        <option value="1">Arroz</option>
+                        <option value="2">Frijoles</option>
+                    </select><br><br>
+                    <label for="opcion_elegida_guarnicion_2">Elige una segunda opción de guarnición:</label><br>
+                    <select id="opcion_elegida_guarnicion_2" name="opcion_elegida_guarnicion_2">
+                        <option value="3">Espagueti</option>
+                        <option value="4">Ensalada</option>
+                    </select><br><br>
+                </div>
+
+                <div id="menu_a_la_carta" style="display:none;">
+                    <label for="opcion_elegida">Elige una opción del menú a la carta:</label><br>
+                    <select id="opcion_elegida" name="opcion_elegida">
+                        <option value="1">Cecina de Yecapixtla</option>
+                        <option value="2">Milanesa de res</option>
+                        <option value="3">Milanesa de pollo</option>
+                        <option value="4">Pechuga asada</option>
+                        <option value="5">Filete de pescado</option>
+                    </select><br><br>
+                </div>
+
+                <label for="cantidad_platos">Cantidad de platos:</label><br>
+                <input type="number" id="cantidad_platos" name="cantidad_platos"><br><br>
+
+                <input type="submit" value="Enviar pedido">
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
+
